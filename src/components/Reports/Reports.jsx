@@ -17,14 +17,15 @@ const Reports = () => {
         doctorName: 'Dr. John Doe',
         doctorSpeciality: 'Cardiology',
         charges: '100',
-        reportUrl: 'https://drive.google.com/file/d/1O6y2aMWxA48GAZqJL-9Rh9LNM-YXhL-T/view',
+        reportUrl: './Patient_Information.pdf',
+
         },
         {
         serialNumber: 2,
         doctorName: 'Dr. Jane Smith',
         doctorSpeciality: 'Dermatology',
         charges: '80',
-        reportUrl: 'https://drive.google.com/file/d/1O6y2aMWxA48GAZqJL-9Rh9LNM-YXhL-T/view',
+        reportUrl: 'Patient_Information.pdf',
         },
         // Add more report data objects as needed
     ];
@@ -51,12 +52,14 @@ const Reports = () => {
                 <td>{report.doctorSpeciality}</td>
                 <td>{report.charges}</td>
                 <td>
-                    <a target='_blank' href={report.reportUrl} className="report-link" rel="noreferrer">
+{/*                     <a target='_blank' href={report.reportUrl} className="report-link" rel="noreferrer"> */}
                         View Report
                     </a>
                 </td>
                 <td>
-                    <a target='_blank' href={report.reportUrl} download className="report-link" rel="noreferrer">
+                 {/*<a target='_blank' href={report.reportUrl} download className="report-link" rel="noreferrer">*/}
+                <a href='Patient_Information.pdf' target='_blank' download className="report-link" rel="noreferrer">
+
                         Download Report
                     </a>
                 </td>
