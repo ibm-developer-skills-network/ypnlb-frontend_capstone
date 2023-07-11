@@ -198,7 +198,7 @@ const Services = () => {
                             <img src={data.imageSrc} alt="services" />
                             <div className="services__details">
                             {data.title === 'Book an appointment' ? (
-                                <Link to="/book-appointment">
+                                <Link to="/search/doctors">
                                 <p>{data.title}</p>
                                 </Link>
                             ) : data.title === 'Instant Consultation' ? (
