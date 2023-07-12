@@ -5,4 +5,5 @@ export { default as BookAppointments } from './BookAppointments/BookAppointments
 export { default as Profile } from './Profile/Profile';
 export { default as GiveReviews } from './GiveReviews/GiveReviews';
 export { default as Reports } from './Reports/Reports';
-export { default as BookAppointments1 } from './InstantConsultation/BookAppointments';
+// export { default as BookAppointments1 } from './InstantConsultation/BookAppointments';
+export { default as Reviews } from './GiveReviews/Reviews/Reviews';

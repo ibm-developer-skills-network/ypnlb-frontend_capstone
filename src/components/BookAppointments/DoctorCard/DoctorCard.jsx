@@ -218,14 +218,6 @@ const DoctorCard = ({ name, speciality, experience, location, clinic, consultati
             <Popup
               style={{ backgroundColor: '#FFFFFF' }}
               trigger={
-                // <button className={`book-appointment-btn ${isAppointmentBooked ? 'cancel-appointment' : ''}`}>
-                //   {isAppointmentBooked ? (
-                //     <div>Cancel Appointment</div>
-                //   ) : (
-                //     <div>Book Appointment</div>
-                //   )}
-                //   <div>No Booking Fee</div>
-                // </button>
                 <button className={`book-appointment-btn ${appointments.length > 0 ? 'cancel-appointment' : ''}`}>
                   {appointments.length > 0 ? (
                     <div>Cancel Appointment</div>
@@ -254,14 +246,7 @@ const DoctorCard = ({ name, speciality, experience, location, clinic, consultati
                       <div className="doctor-card-detail-consultationfees">Ratings: {consultationFees}</div>
                     </div>
                   </div>
-                  {/* {isAppointmentBooked ? (
-                    <div>
-                      <h3 style={{ textAlign: 'center' }}>Appointment Booked!</h3>
-                      <button onClick={() => { close(); handleCancel(); }}>Cancel Appointment</button>
-                    </div>
-                  ) : (
-                    <AppointmentForm doctorName={name} onSubmit={handleFormSubmit} />
-                  )} */}
+                  
                   {appointments.length > 0 ? (
                     <>
                       <h3 style={{ textAlign: 'center' }}>Appointment Booked!</h3>

@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import './FindDoctorSearch.css';
+import React, { useState } from 'react';
+import './FindDoctorSearchIC.css';
 import { useNavigate, Navigate } from 'react-router-dom';
 
 const initLocations = [
@@ -37,28 +37,22 @@ const initSpeciality = [
     'Dentist', 'Gynecologist/obstetrician', 'General Physician', 'Dermatologist', 'Ear-nose-throat (ent) Specialist', 'Homeopath', 'Ayurveda'
 ]
 
-const FindDoctorSearch = () => {
-
-    const [locationResultHidden, setLocationResultHidden] = useState(true);
+const FindDoctorSearchIC = () => {
     const [doctorResultHidden, setDoctorResultHidden] = useState(true);
     const [searchLocation, setSearchLocation] = useState('');
     const [searchDoctor, setSearchDoctor] = useState('');
     const [specialities, setSpecialities] = useState(initSpeciality);
-    const [locations, setLocations] = useState(initLocations);
-
     const navigate = useNavigate();
-
     const handleDoctorSelect = (speciality) => {
         setSearchDoctor(speciality);
         setDoctorResultHidden(true);
-        navigate(`/search/doctors?speciality=${speciality}&location=${searchLocation}`);
+        navigate(`/instant-consultation?speciality=${speciality}&location=${searchLocation}`);
         window.location.reload();
     }
-
     return (
         <div className='finddoctor'>
             <center>
-                <h1>Find a doctor at your own ease</h1>
+                <h1>Find a doctor and Consult instantly</h1>
                 <img class="mainimg" src="https://media.istockphoto.com/id/1291377838/vector/doctor-on-laptop-computer-screen-telemedicine-medical-consultation-vector-stock-illustration.jpg?s=612x612&w=0&k=20&c=7uQfQfXNmeXUNAph5zlzNpUAaaOABQcrlamUOr6-YQY=" alt="" />
                 <div className="home-search-container"  style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                     <div className="doctor-search-box">
@@ -80,7 +74,7 @@ const FindDoctorSearch = () => {
                 </div>
             </center>
         </div>
-    );
+    )
 }
 
-export default FindDoctorSearch;
+export default FindDoctorSearchIC
