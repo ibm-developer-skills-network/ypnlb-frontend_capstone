@@ -17,6 +17,9 @@ connectToMongo();
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 
+//React app
+app.use(express.static('build'))
+
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
